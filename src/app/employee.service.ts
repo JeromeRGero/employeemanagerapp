@@ -10,10 +10,9 @@ import { environment } from 'src/environments/environment';
 
 // This tells the entire application about this service.
 // The other way would be to add the EmployeeService into the providers list
-// inside of app.module.ts
-@Injectable({
-    providedIn: 'root'
-})
+// inside of app.module.ts so either @Injectable({providedIn: 'root'}) or just
+// @Injectable()
+@Injectable({providedIn: 'root'})
 
 export class EmployeeService {
     private apiServerUrl = environment.apiBaseUrl;
